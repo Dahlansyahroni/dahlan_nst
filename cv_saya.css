@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Layout */
+.container {
+    width: 1000px;
+    display: flex;
+    background: white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 35%;
+    background: linear-gradient(180deg, #1f3c88, #162a5e);
+    color: white;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.sidebar img {
+    width: 220px;          /* lebih besar */
+    height: 280px;         /* lebih tinggi */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 4px solid white;   /* frame putih elegan */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* shadow dramatis */
+    transition: 0.3s ease;
+}
+
+.sidebar img:hover {
+    transform: scale(1.05); /* zoom sedikit saat hover */
+}
+
+
+.sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.role {
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+/* Content */
+.content {
+    width: 65%;
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1f3c88;
+    border-bottom: 2px solid #1f3c88;
+    padding-bottom: 5px;
+}
+
+.box {
+    background: #f2f4f8;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Skill */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    border-radius: 10px;
+    animation: load 2s ease forwards;
+}
+
+.node { width: 75%; background: #1f3c88; }
+.vb { width: 70%; background: #3b5998; }
+.python { width: 65%; background: #4caf50; }
+.mysql { width: 80%; background: #ff9800; }
+
+@keyframes load {
+    from { width: 0; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+    }
+}
